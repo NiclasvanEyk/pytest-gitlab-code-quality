@@ -1,0 +1,30 @@
+[project]
+name = "pytest-gitlab-codequality"
+version = "0.1.0"
+description = "Add your description here"
+authors = [{ name = "Niclas van Eyk", email = "niclas.eyk@gmail.com" }]
+dependencies = ["pytest>=8.1.1"]
+readme = "README.md"
+requires-python = ">= 3.12"
+
+classifiers = ["Framework :: Pytest"]
+
+[project.entry-points.pytest11]
+myproject = "pytest_gitlab_codequality"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.rye]
+managed = true
+dev-dependencies = []
+
+[tool.hatch.metadata]
+allow-direct-references = true
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/pytest_gitlab_codequality"]
+
+[tool.isort]
+known_first_party = "pytest_gitlab_codequality"
