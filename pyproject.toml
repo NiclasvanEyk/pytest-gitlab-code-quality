@@ -12,6 +12,7 @@ classifiers = ["Framework :: Pytest"]
 [project.urls]
 Homepage = "https://github.com/NiclasvanEyk/pytest-gitlab-codequality"
 Issues = "https://github.com/NiclasvanEyk/pytest-gitlab-codequality/issues"
+Changelog = "https://github.com/NiclasvanEyk/pytest-gitlab-codequality/blob/main/CHANGELOG.md"
 
 [project.entry-points.pytest11]
 myproject = "pytest_gitlab_codequality"
