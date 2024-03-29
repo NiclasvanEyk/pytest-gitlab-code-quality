@@ -4,7 +4,7 @@ Pytest plugin that generates a GitLab Codequality Report file from the warnings 
 
 | Terminal | GitLab |
 |----------|--------|
-| ![Pytest warnings in the terminal](./.github/images/terminal.png) | ![Pytest warnings in the GitLab merge request widget](./.github/images/gitlab.png) |
+| ![Pytest warnings in the terminal](https://github.com/NiclasvanEyk/pytest-gitlab-codequality/blob/main/.github/images/terminal.png?raw=true) | ![Pytest warnings in the GitLab merge request widget](https://github.com/NiclasvanEyk/pytest-gitlab-codequality/blob/main/.github/images/gitlab.png?raw=true) |
 
 If you run GitLab Premium or Ultimate, you should even see the warnings [right next to the code](https://docs.gitlab.com/ee/ci/testing/code_quality.html#merge-request-changes-view) in the diff view of merge requests.
 The [official documentation](https://docs.gitlab.com/ee/ci/testing/code_quality.html) contains more information and screenshots.
