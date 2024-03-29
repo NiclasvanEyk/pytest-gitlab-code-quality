@@ -9,6 +9,10 @@ requires-python = ">=3.12"
 
 classifiers = ["Framework :: Pytest"]
 
+[project.urls]
+Homepage = "https://github.com/NiclasvanEyk/pytest-gitlab-codequality"
+Issues = "https://github.com/NiclasvanEyk/pytest-gitlab-codequality/issues"
+
 [project.entry-points.pytest11]
 myproject = "pytest_gitlab_codequality"
 
