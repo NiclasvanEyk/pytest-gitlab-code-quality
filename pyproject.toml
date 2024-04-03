@@ -26,10 +26,7 @@ addopts = ["--import-mode=importlib"]
 
 [tool.rye]
 managed = true
-dev-dependencies = [
-    "ruff>=0.3.5",
-    "coverage>=7.4.4",
-]
+dev-dependencies = ["ruff>=0.3.5", "coverage>=7.4.4"]
 
 [tool.hatch.metadata]
 allow-direct-references = true
@@ -75,4 +72,4 @@ select = [
   "FURB",
   "RUF",
 ]
-ignore = ["ANN101", "PT013"]
+ignore = ["ANN101", "PT013", "S101"]
