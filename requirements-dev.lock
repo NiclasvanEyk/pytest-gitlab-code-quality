@@ -8,6 +8,7 @@
 #   with-sources: false
 
 -e file:.
+coverage==7.4.4
 iniconfig==2.0.0
     # via pytest
 packaging==24.0

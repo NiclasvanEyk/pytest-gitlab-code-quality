@@ -21,9 +21,15 @@ myproject = "pytest_gitlab_code_quality"
 requires = ["hatchling"]
 build-backend = "hatchling.build"
 
+[tool.pytest.ini_options]
+addopts = ["--import-mode=importlib"]
+
 [tool.rye]
 managed = true
-dev-dependencies = ["ruff>=0.3.5"]
+dev-dependencies = [
+    "ruff>=0.3.5",
+    "coverage>=7.4.4",
+]
 
 [tool.hatch.metadata]
 allow-direct-references = true
@@ -36,5 +42,37 @@ known_first_party = "pytest_gitlab_code_quality"
 
 [tool.ruff.lint]
 preview = true
-select = ["F", "I", "UP", "N", "YTT", "ANN", "ASYNC", "S", "BLE", "FBT", "B", "C4", "DTZ", "T10", "EM", "FA", "LOG", "G", "INP", "PIE", "T20", "PT", "RSE", "RET", "SLF", "SIM", "TID", "PTH", "PLE", "FURB", "RUF"]
+select = [
+  "F",
+  "I",
+  "UP",
+  "N",
+  "YTT",
+  "ANN",
+  "ASYNC",
+  "S",
+  "BLE",
+  "FBT",
+  "B",
+  "C4",
+  "DTZ",
+  "T10",
+  "EM",
+  "FA",
+  "LOG",
+  "G",
+  "INP",
+  "PIE",
+  "T20",
+  "PT",
+  "RSE",
+  "RET",
+  "SLF",
+  "SIM",
+  "TID",
+  "PTH",
+  "PLE",
+  "FURB",
+  "RUF",
+]
 ignore = ["ANN101", "PT013"]
