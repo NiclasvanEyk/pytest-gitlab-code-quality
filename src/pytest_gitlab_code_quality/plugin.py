@@ -1,9 +1,10 @@
-from pytest import Config
 from pathlib import Path
 from warnings import WarningMessage
 
-from pytest_gitlab_code_quality.report import Lines, Location, Violation
+from pytest import Config
+
 from pytest_gitlab_code_quality.recorder import ViolationRecorder
+from pytest_gitlab_code_quality.report import Lines, Location, Violation
 
 
 class GitlabCodeQualityReportPlugin:
@@ -25,15 +26,13 @@ class GitlabCodeQualityReportPlugin:
         when: str,
         nodeid: str,
         location: tuple[str, int, str] | None,
-    ):
+    ) -> None:
         path = warning_message.filename.replace(str(self._root), "")
         if path.startswith("/"):
             path = path.removeprefix("/")
 
         # TODO: Utilize location
         message = warning_message.message
-        print(location)
-        print(warning_message)
 
         violation = Violation(
             description=str(message),
@@ -50,5 +49,5 @@ class GitlabCodeQualityReportPlugin:
 
         self._recorder.record(violation)
 
-    def pytest_unconfigure(self, config: Config):
+    def pytest_unconfigure(self, config: Config) -> None:
         self._recorder.close()

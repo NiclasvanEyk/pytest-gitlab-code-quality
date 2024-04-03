@@ -35,4 +35,6 @@ packages = ["src/pytest_gitlab_code_quality"]
 known_first_party = "pytest_gitlab_code_quality"
 
 [tool.ruff.lint]
-select = ["E", "F", "I", "UP", "N", "YTT", "ANN"]
+preview = true
+select = ["F", "I", "UP", "N", "YTT", "ANN", "ASYNC", "S", "BLE", "FBT", "B", "C4", "DTZ", "T10", "EM", "FA", "LOG", "G", "INP", "PIE", "T20", "PT", "RSE", "RET", "SLF", "SIM", "TID", "PTH", "PLE", "FURB", "RUF"]
+ignore = ["ANN101", "PT013"]

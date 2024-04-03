@@ -1,6 +1,6 @@
+from dataclasses import asdict
 from io import TextIOWrapper
 from json import dumps
-from dataclasses import asdict
 
 from pytest_gitlab_code_quality.report import Violation
 
