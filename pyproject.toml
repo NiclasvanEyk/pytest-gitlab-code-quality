@@ -1,7 +1,7 @@
 [project]
-name = "pytest-gitlab-codequality"
-version = "0.1.1"
-description = "Collects warnings while testing and generates a GitLab Codequality Report."
+name = "pytest-gitlab-code-quality"
+version = "0.1.2.dev-2"
+description = "Collects warnings while testing and generates a GitLab Code Quality Report."
 authors = [{ name = "Niclas van Eyk", email = "niclas.eyk@gmail.com" }]
 dependencies = ["pytest>=8.1.1"]
 readme = "README.md"
@@ -10,12 +10,12 @@ requires-python = ">=3.12"
 classifiers = ["Framework :: Pytest"]
 
 [project.urls]
-Homepage = "https://github.com/NiclasvanEyk/pytest-gitlab-codequality"
-Issues = "https://github.com/NiclasvanEyk/pytest-gitlab-codequality/issues"
-Changelog = "https://github.com/NiclasvanEyk/pytest-gitlab-codequality/blob/main/CHANGELOG.md"
+Homepage = "https://github.com/NiclasvanEyk/pytest-gitlab-code-quality"
+Issues = "https://github.com/NiclasvanEyk/pytest-gitlab-code-quality/issues"
+Changelog = "https://github.com/NiclasvanEyk/pytest-gitlab-code-quality/blob/main/CHANGELOG.md"
 
 [project.entry-points.pytest11]
-myproject = "pytest_gitlab_codequality"
+myproject = "pytest_gitlab_code_quality"
 
 [build-system]
 requires = ["hatchling"]
@@ -23,13 +23,16 @@ build-backend = "hatchling.build"
 
 [tool.rye]
 managed = true
-dev-dependencies = []
+dev-dependencies = ["ruff>=0.3.5"]
 
 [tool.hatch.metadata]
 allow-direct-references = true
 
 [tool.hatch.build.targets.wheel]
-packages = ["src/pytest_gitlab_codequality"]
+packages = ["src/pytest_gitlab_code_quality"]
 
 [tool.isort]
-known_first_party = "pytest_gitlab_codequality"
+known_first_party = "pytest_gitlab_code_quality"
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "UP", "N", "YTT", "ANN"]

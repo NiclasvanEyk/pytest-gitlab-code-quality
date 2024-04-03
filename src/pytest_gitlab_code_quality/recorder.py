@@ -2,7 +2,7 @@ from io import TextIOWrapper
 from json import dumps
 from dataclasses import asdict
 
-from pytest_gitlab_codequality.report import Violation
+from pytest_gitlab_code_quality.report import Violation
 
 
 class ViolationRecorder:

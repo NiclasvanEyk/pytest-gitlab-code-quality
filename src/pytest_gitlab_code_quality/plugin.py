@@ -2,11 +2,11 @@ from pytest import Config
 from pathlib import Path
 from warnings import WarningMessage
 
-from pytest_gitlab_codequality.report import Lines, Location, Violation
-from pytest_gitlab_codequality.recorder import ViolationRecorder
+from pytest_gitlab_code_quality.report import Lines, Location, Violation
+from pytest_gitlab_code_quality.recorder import ViolationRecorder
 
 
-class GitlabCodequalityReportPlugin:
+class GitlabCodeQualityReportPlugin:
     """
     Orchestrates the test warnings to be recorded.
     """
