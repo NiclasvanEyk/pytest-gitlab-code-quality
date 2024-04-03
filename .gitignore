@@ -8,3 +8,9 @@ wheels/
 
 # venv
 .venv
+
+# coverage
+.coverage
+
+# test files
+pytest-warnings.json
