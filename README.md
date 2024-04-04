@@ -23,7 +23,7 @@ then specify the output location for the report using the `--gitlab-code-quality
 pytest --gitlab-code-quality-report=pytest-warnings.json
 ```
 
-Finally, tell GitLab about them during CI
+In GitLab CI, this will look similar to this:
 
 ```yaml
 # .gitlab-ci.yml
