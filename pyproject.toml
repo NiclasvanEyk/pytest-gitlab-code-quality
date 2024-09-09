@@ -5,7 +5,7 @@ description = "Collects warnings while testing and generates a GitLab Code Quali
 authors = [{ name = "Niclas van Eyk", email = "niclas.eyk@gmail.com" }]
 dependencies = ["pytest>=8.1.1"]
 readme = "README.md"
-requires-python = ">=3.12"
+requires-python = ">=3.9"
 
 classifiers = ["Framework :: Pytest"]
 
