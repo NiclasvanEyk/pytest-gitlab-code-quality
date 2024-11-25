@@ -1,6 +1,11 @@
-# GitLab Code Quality Report Provider for Pytest Warnings
+# GitLab Code Quality for Pytest
 
-Pytest plugin that generates a GitLab Code Quality Report file from the warnings emitted when running the tests.
+![current package version](https://img.shields.io/pypi/v/pytest-gitlab-code-quality)
+![supported Python versions](https://img.shields.io/pypi/pyversions/pytest-gitlab-code-quality)
+![github sponsors](https://img.shields.io/github/sponsors/NiclasvanEyk)
+![license](https://img.shields.io/github/license/NiclasvanEyk/pytest-gitlab-code-quality)
+
+Enables GitLab to collect and show warnings emitted during your test runs through their [code quality report].
 
 | Terminal | GitLab |
 |----------|--------|
@@ -49,4 +54,3 @@ Tests are a cheap way to surface such issues.
 While you may run the tests locally and see these warnings there, you also might overlook them or don't know whether they were introduced by your changes or were already present before.
 Either way, I think it makes sense to explicitly surface and track them during code review instead of burying them in the CI logs that nobody looks at when the tests pass.
 And that is exactly why this plugin was created.
-

@@ -2,39 +2,32 @@ name: Validate
 
 on:
   push:
-    branches: [ "main" ]
+    branches: ["main"]
   pull_request:
-    branches: [ "main" ]
+    branches: ["main"]
 
 jobs:
   build:
-
     runs-on: ubuntu-latest
     strategy:
       fail-fast: false
       matrix:
-        python-version: [
-          "3.9",
-          "3.10",
-          "3.11",
-          "3.12"
-        ]
+        python-version: ["3.9", "3.10", "3.11", "3.12", "3.13"]
 
     steps:
-    - uses: actions/checkout@v3
-    - name: Set up Python ${{ matrix.python-version }}
-      uses: actions/setup-python@v3
-      with:
-        python-version: ${{ matrix.python-version }}
-    - name: Install dependencies
-      run: |
-        python -m pip install --upgrade pip
-        pip install -r requirements.lock -r requirements-dev.lock
-    - name: Test
-      run: |
-        coverage run -m pytest
-        coverage report
-    - name: Lint
-      run: ruff check --output-format=github
-    - name: Format
-      run: ruff format --diff
+      - uses: actions/checkout@v3
+      - name: Install the latest version of uv
+        uses: astral-sh/setup-uv@v3
+        with:
+          enable-cache: true
+          version: "latest"
+      - name: Install Python and dependencies
+        run: uv sync --python-preference=only-managed --python=${{ matrix.python-version }}
+      - name: Test
+        run: |
+          uv run --frozen coverage run -m pytest
+          uv run --frozen coverage report
+      - name: Lint
+        run: uv run --frozen ruff check --output-format=github
+      - name: Format
+        run: uv run --frozen ruff format --diff
