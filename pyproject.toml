@@ -5,10 +5,19 @@ authors = [{ name = "Niclas van Eyk", email = "niclas.eyk@gmail.com" }]
 description = "Collects warnings while testing and generates a GitLab Code Quality Report."
 classifiers = [
   "Framework :: Pytest",
+  "Programming Language :: Python",
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3 :: Only",
+  "Programming Language :: Python :: 3.9",
+  "Programming Language :: Python :: 3.10",
+  "Programming Language :: Python :: 3.11",
+  "Programming Language :: Python :: 3.12",
+  "Programming Language :: Python :: 3.13",
   "Topic :: Software Development :: Quality Assurance",
   "Topic :: Software Development :: Testing",
 ]
 readme = "README.md"
+license = { file = "LICENSE.md" }
 requires-python = ">=3.9"
 dependencies = ["pytest>=8.1.1"]
 
@@ -17,6 +26,8 @@ dev = ["coverage>=7.6.8", "ruff>=0.8.0"]
 
 [project.urls]
 Homepage = "https://github.com/NiclasvanEyk/pytest-gitlab-code-quality"
+Documentation = "https://github.com/NiclasvanEyk/pytest-gitlab-code-quality"
+Repository = "https://github.com/NiclasvanEyk/pytest-gitlab-code-quality"
 Issues = "https://github.com/NiclasvanEyk/pytest-gitlab-code-quality/issues"
 Changelog = "https://github.com/NiclasvanEyk/pytest-gitlab-code-quality/blob/main/CHANGELOG.md"
 
