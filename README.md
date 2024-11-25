@@ -1,5 +1,10 @@
 # GitLab Code Quality for Pytest
 
+![current package version](https://img.shields.io/pypi/v/pytest-gitlab-code-quality)
+![supported Python versions](https://img.shields.io/pypi/pyversions/pytest-gitlab-code-quality)
+![github sponsors](https://img.shields.io/github/sponsors/NiclasvanEyk)
+![license](https://img.shields.io/github/license/NiclasvanEyk/pytest-gitlab-code-quality)
+
 Enables GitLab to collect and show warnings emitted during your test runs through their [code quality report].
 
 | Terminal | GitLab |
