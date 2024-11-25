@@ -43,3 +43,35 @@ def test_works_for_manually_emitted_warning(pytester: Pytester) -> None:
         warnings[0]["location"]["path"] == "test_works_for_manually_emitted_warning.py"
     )
     assert warnings[0]["location"]["lines"]["begin"] == 7
+
+
+def test_works_for_multiple_warnings(pytester: Pytester) -> None:
+    pytester.makepyfile("""
+        import warnings
+
+        def test_no_warning():
+            assert 1 == 1
+
+        def test_has_warning():
+            warnings.warn("beware!")
+
+        def test_also_has_warning():
+            warnings.warn("also beware!")
+    """)
+    result = pytester.runpytest("--gitlab-code-quality-report", "pytest-warnings.json")
+    assert result.ret == 0
+
+    report_file = pytester.path / "pytest-warnings.json"
+    assert report_file.exists()
+
+    warnings = loads(report_file.read_text())
+    assert len(warnings) == 2
+    assert warnings[0]["description"] == "beware!"
+    assert warnings[0]["check_name"] == "PytestUserWarning"
+    assert warnings[0]["location"]["path"] == "test_works_for_multiple_warnings.py"
+    assert warnings[0]["location"]["lines"]["begin"] == 7
+
+    assert warnings[1]["description"] == "also beware!"
+    assert warnings[1]["check_name"] == "PytestUserWarning"
+    assert warnings[1]["location"]["path"] == "test_works_for_multiple_warnings.py"
+    assert warnings[1]["location"]["lines"]["begin"] == 10
