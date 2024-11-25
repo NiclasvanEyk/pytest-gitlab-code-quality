@@ -25,9 +25,9 @@ jobs:
         run: uv sync --python-preference=only-managed --python=${{ matrix.python-version }}
       - name: Test
         run: |
-          uv run coverage run -m pytest
-          uv run coverage report
+          uv run --frozen coverage run -m pytest
+          uv run --frozen coverage report
       - name: Lint
-        run: uv run ruff check --output-format=github
+        run: uv run --frozen ruff check --output-format=github
       - name: Format
-        run: uv run ruff format --diff
+        run: uv run --frozen ruff format --diff
