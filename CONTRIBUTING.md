@@ -2,32 +2,31 @@
 
 ## Setup
 
-The project uses [Rye](https://rye-up.com), but feel free to install or setup the required packages using plain `pip` or whatever you prefer.
+The project uses [uv](https://github.com/astral-sh/uv), but feel free to install or setup the required packages using plain `pip` or whatever you prefer.
 
-Install the dependencies using 
+Install the dependencies using
 
 ```shell
-rye sync
+uv sync
 ```
 
 and run the tests using
 
 ```shell
-pytest
+uv run pytest
 ```
 
 The project also uses `ruff` as a linter and formatter, so you may use
 
 ```shell
-ruff check
+uv run ruff check
 ```
 
 to run automated checks and
 
 ```shell
-ruff format
+uv run ruff format
 ```
 
 to automatically format your code.
 Both of these steps will run automatically in GitHub actions on every PR.
-
