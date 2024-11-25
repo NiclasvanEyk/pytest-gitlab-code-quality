@@ -3,7 +3,11 @@ name = "pytest-gitlab-code-quality"
 version = "0.2.1"
 authors = [{ name = "Niclas van Eyk", email = "niclas.eyk@gmail.com" }]
 description = "Collects warnings while testing and generates a GitLab Code Quality Report."
-classifiers = ["Framework :: Pytest"]
+classifiers = [
+  "Framework :: Pytest",
+  "Topic :: Software Development :: Quality Assurance",
+  "Topic :: Software Development :: Testing",
+]
 readme = "README.md"
 requires-python = ">=3.9"
 dependencies = ["pytest>=8.1.1"]
@@ -22,6 +26,9 @@ pytest-gitlab-code-quality = "pytest_gitlab_code_quality"
 [build-system]
 requires = ["hatchling"]
 build-backend = "hatchling.build"
+
+[tool.coverage.run]
+source = ["src"]
 
 [tool.ruff.lint]
 preview = true
@@ -58,4 +65,4 @@ select = [
   "FURB",
   "RUF",
 ]
-ignore = ["ANN101", "PT013", "S101"]
+ignore = ["PT013", "S101"]
