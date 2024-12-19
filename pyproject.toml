@@ -15,6 +15,8 @@ classifiers = [
   "Programming Language :: Python :: 3.13",
   "Topic :: Software Development :: Quality Assurance",
   "Topic :: Software Development :: Testing",
+  "Intended Audience :: Developers",
+  "License :: OSI Approved :: MIT License",
 ]
 readme = "README.md"
 license = { file = "LICENSE.md" }
@@ -30,6 +32,7 @@ Documentation = "https://github.com/NiclasvanEyk/pytest-gitlab-code-quality"
 Repository = "https://github.com/NiclasvanEyk/pytest-gitlab-code-quality"
 Issues = "https://github.com/NiclasvanEyk/pytest-gitlab-code-quality/issues"
 Changelog = "https://github.com/NiclasvanEyk/pytest-gitlab-code-quality/blob/main/CHANGELOG.md"
+Funding = "https://github.com/sponsors/NiclasvanEyk"
 
 [project.entry-points.pytest11]
 pytest-gitlab-code-quality = "pytest_gitlab_code_quality"
