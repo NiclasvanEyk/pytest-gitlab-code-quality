@@ -31,3 +31,5 @@ jobs:
         run: uv run --frozen ruff check --output-format=github
       - name: Format
         run: uv run --frozen ruff format --diff
+      - name: Type Check
+        run: uv run --frozen ty check --output-format=github

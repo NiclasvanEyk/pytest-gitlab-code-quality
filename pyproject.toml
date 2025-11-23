@@ -24,7 +24,11 @@ requires-python = ">=3.9"
 dependencies = ["pytest>=8.1.1"]
 
 [dependency-groups]
-dev = ["coverage>=7.6.8", "ruff>=0.8.0"]
+dev = [
+    "coverage>=7.6.8",
+    "ruff>=0.8.0",
+    "ty>=0.0.1a27",
+]
 
 [project.urls]
 Homepage = "https://github.com/NiclasvanEyk/pytest-gitlab-code-quality"
