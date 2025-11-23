@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+from hashlib import md5
 from pathlib import Path
 from warnings import WarningMessage
 
@@ -33,20 +34,20 @@ class GitlabCodeQualityReportPlugin:
         if path.startswith("/"):
             path = path.removeprefix("/")
 
-        # TODO: Utilize location
-        message = warning_message.message
+        message = str(warning_message.message)
+
+        fingerprint = md5(usedforsecurity=False)
+        fingerprint.update(path.encode("utf-8"))
+        fingerprint.update(message.encode("utf-8"))
+        if nodeid:
+            fingerprint.update(nodeid.encode("utf-8"))
 
         violation = Violation(
-            description=str(message),
+            description=message,
             check_name=f"Pytest{warning_message.category.__name__}",
-            fingerprint=str(hash(f"{nodeid}::{warning_message.lineno}::{message}")),
+            fingerprint=fingerprint.hexdigest(),
             severity="minor",
-            location=Location(
-                path=path,
-                lines=Lines(
-                    begin=warning_message.lineno,
-                ),
-            ),
+            location=Location(path=path, lines=Lines(begin=warning_message.lineno)),
         )
 
         self._recorder.record(violation)
