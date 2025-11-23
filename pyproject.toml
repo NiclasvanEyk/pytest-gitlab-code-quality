@@ -1,6 +1,6 @@
 [project]
 name = "pytest-gitlab-code-quality"
-version = "0.2.1"
+version = "0.3.0"
 authors = [{ name = "Niclas van Eyk", email = "niclas.eyk@gmail.com" }]
 description = "Collects warnings while testing and generates a GitLab Code Quality Report."
 classifiers = [
@@ -13,6 +13,7 @@ classifiers = [
   "Programming Language :: Python :: 3.11",
   "Programming Language :: Python :: 3.12",
   "Programming Language :: Python :: 3.13",
+  "Programming Language :: Python :: 3.14",
   "Topic :: Software Development :: Quality Assurance",
   "Topic :: Software Development :: Testing",
   "Intended Audience :: Developers",
