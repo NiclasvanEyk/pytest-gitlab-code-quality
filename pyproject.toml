@@ -22,7 +22,7 @@ classifiers = [
 readme = "README.md"
 license = { file = "LICENSE.md" }
 requires-python = ">=3.9"
-dependencies = ["pytest>=8.1.1"]
+dependencies = ["pytest>=5.0.0"]
 
 [dependency-groups]
 dev = [
@@ -40,7 +40,7 @@ Changelog = "https://github.com/NiclasvanEyk/pytest-gitlab-code-quality/blob/mai
 Funding = "https://github.com/sponsors/NiclasvanEyk"
 
 [project.entry-points.pytest11]
-pytest-gitlab-code-quality = "pytest_gitlab_code_quality"
+pytest-gitlab-code-quality = "pytest_gitlab_code_quality.pytest_hooks"
 
 [build-system]
 requires = ["hatchling"]
