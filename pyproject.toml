@@ -43,8 +43,8 @@ Funding = "https://github.com/sponsors/NiclasvanEyk"
 pytest-gitlab-code-quality = "pytest_gitlab_code_quality.pytest_hooks"
 
 [build-system]
-requires = ["hatchling"]
-build-backend = "hatchling.build"
+requires = ["uv_build>=0.11.7,<0.12"]
+build-backend = "uv_build"
 
 [tool.coverage.run]
 source = ["src"]
