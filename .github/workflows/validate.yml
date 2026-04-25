@@ -7,7 +7,7 @@ on:
     branches: ["main"]
 
 jobs:
-  build:
+  test:
     runs-on: ubuntu-latest
     strategy:
       fail-fast: false
@@ -30,6 +30,19 @@ jobs:
         run: |
           uv run --frozen coverage run -m pytest
           uv run --frozen coverage report
+
+  verify:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v3
+      - name: Install the latest version of uv
+        uses: astral-sh/setup-uv@v3
+        with:
+          enable-cache: true
+          version: "latest"
+      - name: Install Python and dependencies
+        run: uv sync --python-preference=only-managed --python=3.14
       - name: Lint
         run: uv run --frozen ruff check --output-format=github
       - name: Format
