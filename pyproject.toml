@@ -22,7 +22,7 @@ classifiers = [
 readme = "README.md"
 license = { file = "LICENSE.md" }
 requires-python = ">=3.9"
-dependencies = ["pytest>=7.0.0"]
+dependencies = ["pytest>=5.0.0"]
 
 [dependency-groups]
 dev = [
