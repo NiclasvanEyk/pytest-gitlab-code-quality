@@ -20,7 +20,7 @@ classifiers = [
   "License :: OSI Approved :: MIT License",
 ]
 readme = "README.md"
-license = { file = "LICENSE.md" }
+license = "MIT"
 requires-python = ">=3.9"
 dependencies = ["pytest>=5.0.0"]
 
