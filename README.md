@@ -5,7 +5,7 @@
 ![github sponsors](https://img.shields.io/github/sponsors/NiclasvanEyk)
 ![license](https://img.shields.io/github/license/NiclasvanEyk/pytest-gitlab-code-quality)
 
-Enables GitLab to collect and show warnings emitted during your test runs through their [code quality report].
+Enables GitLab to collect and show warnings emitted during your test runs through their [code quality report](https://docs.gitlab.com/ci/testing/code_quality/).
 
 | Terminal | GitLab |
 |----------|--------|
