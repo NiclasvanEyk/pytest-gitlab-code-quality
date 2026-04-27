@@ -19,7 +19,7 @@ jobs:
         with:
           enable-cache: true
           version: "latest"
-      - name Build:
+      - name: Build
         run: uv build
       - name: Publish package distributions to PyPI
         uses: pypa/gh-action-pypi-publish@release/v1
