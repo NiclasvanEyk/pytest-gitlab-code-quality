@@ -1,6 +1,6 @@
 [project]
 name = "pytest-gitlab-code-quality"
-version = "0.3.0"
+version = "0.3.1"
 authors = [{ name = "Niclas van Eyk", email = "niclas.eyk@gmail.com" }]
 description = "Collects warnings while testing and generates a GitLab Code Quality Report."
 classifiers = [
